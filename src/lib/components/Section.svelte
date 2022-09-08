@@ -35,5 +35,6 @@
   main {
     align-self: center;
     width: 92.5%;
+    padding-top: 2rem;
   }
 </style>

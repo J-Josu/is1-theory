@@ -1,3 +1,7 @@
+<script lang="ts">
+  import SolvedLogo from '$cmps/SolvedLogo.svelte';
+</script>
+
 <header>
   <nav>
     <ul>
@@ -9,8 +13,11 @@
         >
       </li>
       <li>
-        <a href="https://github.com/" target="_blank" rel="noopener noreferrer"
-          >Repositorio</a
+        <a
+          href="https://github.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="logo"><SolvedLogo height="1.5rem" /></a
         >
       </li>
       <li>
@@ -28,6 +35,7 @@
   header {
     display: flex;
     align-items: center;
+    z-index: 1;
     width: 100vw;
     height: 3rem;
     position: sticky;
@@ -69,7 +77,7 @@
     position: relative;
     padding: 0;
     border: none;
-    opacity: 0.9;
+    opacity: 0.75;
     /* color: var(--fc-primary); */
     font-weight: bolder;
   }
@@ -80,7 +88,7 @@
     width: 0%;
     bottom: 0;
     left: 50%;
-    border-bottom: 2px solid gray;
+    border-bottom: 2px solid hsl(0, 0%, 25%);
     opacity: 1;
     transition: width 0.5s ease, left 0.5s ease;
   }
@@ -90,5 +98,8 @@
   a:hover::before {
     width: 100%;
     left: 0px;
+  }
+  .logo::before {
+    border-color: hsl(45, 100%, 50%);
   }
 </style>
