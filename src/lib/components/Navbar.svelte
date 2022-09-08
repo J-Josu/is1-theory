@@ -14,7 +14,7 @@
       </li>
       <li>
         <a
-          href="https://github.com/"
+          href="https://github.com/J-Josu/is1-theory/"
           target="_blank"
           rel="noopener noreferrer"
           class="logo"><SolvedLogo height="1.5rem" /></a
@@ -36,7 +36,7 @@
     display: flex;
     align-items: center;
     z-index: 1;
-    width: 100vw;
+    width: 100%;
     height: 3rem;
     position: sticky;
     top: 0;

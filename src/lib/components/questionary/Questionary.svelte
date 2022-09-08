@@ -11,18 +11,17 @@
 <!-- description={'5. Un cuestionario para los/las gerentes de cada local. Definirlo adecuadamente según lo visto en teoría con, a lo sumo 20 preguntas'} -->
 <style>
   div {
-    padding: 0.5rem;
-    margin-top: 2rem;
-    width: auto;
+    display: flex;
+    justify-content: center;
   }
   a {
-    display: flex;
+    /* display: flex;
     align-items: center;
     justify-content: space-around;
-    justify-items: space-around;
+    justify-items: space-around; */
+    width: 90%;
   }
   img {
-    width: 75%;
-    height: 75%;
+    width: 100%;
   }
 </style>

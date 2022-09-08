@@ -1,9 +1,9 @@
 <script lang="ts">
   import '../app.css';
-  import Navbar from '$cmps/Navbar.svelte';
+  import NavBar from '$cmps/NavBar.svelte';
 </script>
 
-<Navbar />
+<NavBar />
 
 <main>
   <slot />

@@ -7,6 +7,11 @@
   import TeamData from '$cmps/teamData/TeamData.svelte';
 </script>
 
+<svelte:head>
+  <title>Solved</title>
+  <link rel="icon" href="/argentinian_flag_sun.svg" />
+</svelte:head>
+
 <div>
   <h1>Trabajo práctico de teoría: 1</h1>
 
@@ -26,7 +31,10 @@
     <Script />
   </Section>
 
-  <Section title={'Cuestionario'} subTitle={'Estructura de los cuestionarios'}>
+  <Section
+    title={'Cuestionario'}
+    subTitle={'Conformacion de los cuestionarios a realizar'}
+  >
     <Questionary />
   </Section>
 

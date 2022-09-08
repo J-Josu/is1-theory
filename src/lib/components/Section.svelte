@@ -17,7 +17,7 @@
   section {
     display: flex;
     flex-direction: column;
-    margin-top: 2rem;
+    margin-top: 3rem;
     padding-block: 1rem;
     padding-inline: 0.25rem;
   }
@@ -25,11 +25,13 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding-block: 1rem;
   }
   header > h1 {
     font-size: 2rem;
   }
   header > p {
+    margin-top: 0.25rem;
     font-size: 1.25rem;
   }
   main {

@@ -15,9 +15,7 @@
   </SimpleField>
 </div>
 
-<!-- <h3>Enunciado:</h3>
-<p>{contentSummary}</p>  description={'1. Número de grupo.\n2. El nombre , apellido y número de legajo de cada integrante del grupo.\n3. Nombre del equipo de desarrollo, deben buscar un nombre de fantasía para su equipo de desarrollo de software.'}
- -->
+<!-- description={'1. Número de grupo.\n2. El nombre , apellido y número de legajo de cada integrante del grupo.\n3. Nombre del equipo de desarrollo, deben buscar un nombre de fantasía para su equipo de desarrollo de software.'} -->
 <style>
   /* p {
     margin-bottom: 0.5rem;
