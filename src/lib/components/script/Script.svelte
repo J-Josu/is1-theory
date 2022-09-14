@@ -3,12 +3,12 @@
   import Comments from './Comments.svelte';
   import Specification from './Specification.svelte';
 
-  import data from './data.json'
+  import data from './data.json';
 </script>
 
 <div>
-  <Specification context={data.context}/>
-  <Assigments startTime={[1,2]} items={data.script}/>
+  <Specification context={data.context} />
+  <Assigments startTime={[1, 2]} items={data.script} />
   <Comments comments={data.notes} />
 </div>
 
@@ -17,7 +17,12 @@
   div {
     border: 1px solid gray;
     border-radius: 1px;
-    padding: 0.5rem;
     margin-top: 2rem;
+  }
+
+  @media screen and (min-width: 688px) {
+    div {
+      padding: 0.5rem;
+    }
   }
 </style>

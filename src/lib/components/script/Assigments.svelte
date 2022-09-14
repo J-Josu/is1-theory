@@ -23,22 +23,20 @@
 
 <div class="container">
   <div class="grid">
-    <p>Tiempo asignado</p>
+    <p>Tiempo asignado (minutos)</p>
     <p>Pregunta u objetivo del administrador</p>
     <p>Respuesta del entrevistado</p>
   </div>
   {#each items as item}
     <Assigment time={item.time}>
       {#if item.type === 'objetive'}
-        <Objective
-        category={item.title }
-        objectives={item.items}></Objective>
-        {:else}
+        <Objective category={item.title} objectives={item.items} />
+      {:else}
         <Question
-      index={item.index}
-      question={item.question}
-      tracing={item.tracing}
-    />
+          index={item.index}
+          question={item.question}
+          tracing={item.tracing}
+        />
       {/if}
     </Assigment>
   {/each}
@@ -57,8 +55,7 @@
 
 <style>
   .container {
-    padding: 1rem;
-    border-bottom: 1px solid gray;
+    padding: 0rem;
   }
   :global(.grid) {
     display: grid;
@@ -66,6 +63,14 @@
   }
   :global(.grid > *) {
     border: 1px solid lightgrey;
-    padding: 0.25rem;
+    padding: 0.15rem;
+  }
+  @media screen and (min-width: 688px) {
+    .container {
+      padding: 1rem;
+    }
+    :global(.grid > *) {
+      padding: 0.25rem;
+    }
   }
 </style>

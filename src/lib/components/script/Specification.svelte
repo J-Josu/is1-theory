@@ -38,6 +38,5 @@
 <style>
   div {
     padding: 1rem;
-    border-bottom: 1px solid gray;
   }
 </style>

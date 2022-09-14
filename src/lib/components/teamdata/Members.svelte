@@ -14,7 +14,6 @@
 
 <style>
   div {
-    border-bottom: 2px solid gray;
     padding-block: 1rem;
   }
   h3 {

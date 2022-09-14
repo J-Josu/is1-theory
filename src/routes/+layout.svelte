@@ -47,9 +47,11 @@
     margin: 0.25rem;
     font-style: italic;
     transition: all 0.5s ease-out;
+    opacity: 0.7;
   }
   a:hover {
     font-size: 0.9rem;
     color: var(--dark-green-2);
+    opacity: 0.9;
   }
 </style>

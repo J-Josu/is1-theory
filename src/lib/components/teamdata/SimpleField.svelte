@@ -4,9 +4,11 @@
 </script>
 
 <div class="container">
-  <p><b>{name}:</b> {content}</p>
+  <div class="inner">
+    <h3>{name}:</h3><span>{content}</span>
+  </div>
   {#if $$slots.default}
-    <div>
+    <div class='slot'>
       <slot />
     </div>
   {/if}
@@ -14,17 +16,22 @@
 
 <style>
   .container {
-    border-bottom: 2px solid gray;
     padding-block: 1rem;
   }
-  p {
+  .inner {
+    display: flex;
     margin-top: 1rem;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
+    align-items: center;
   }
-  p::first-letter {
+  h3 {
+    font-size: 1.5rem;
+    margin-right: 1ch;
+  }
+  h3::first-letter {
     text-transform: uppercase;
   }
-  .container > div {
+  .slot {
     margin: 1rem 1rem 0 1rem;
   }
 </style>
