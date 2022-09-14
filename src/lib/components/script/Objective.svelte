@@ -1,6 +1,6 @@
 <script lang="ts">
-  export let category: string;
-  export let objectives: string[];
+  export let category: string='';
+  export let objectives: string[]=[];
 </script>
 
 <div>

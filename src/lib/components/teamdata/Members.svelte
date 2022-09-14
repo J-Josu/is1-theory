@@ -23,10 +23,25 @@
   }
   ul {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(1, 1fr);
     column-gap: 2rem;
     row-gap: 1rem;
     margin-top: 1rem;
     margin-left: 1rem;
+  }
+  @media screen and (min-width: 688px) {
+    ul {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  @media screen and (min-width: 992px) {
+    nav {
+      max-width: 80vw;
+    }
+  }
+  @media screen and (min-width: 1312px) {
+    nav {
+      max-width: 70vw;
+    }
   }
 </style>

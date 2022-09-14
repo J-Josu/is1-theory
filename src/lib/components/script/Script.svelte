@@ -3,17 +3,13 @@
   import Comments from './Comments.svelte';
   import Specification from './Specification.svelte';
 
-  let comments: string[] = [
-    'Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, voluptatibus iure consequatur sint velit veritatis aperiam natus corporis eos eaque.',
-    'Lorem adipisicing elit. Magnam, quis?',
-    'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquam magni qui assumenda ',
-  ];
+  import data from './data.json'
 </script>
 
 <div>
-  <Specification />
-  <Assigments startTime="1 a 2 min." />
-  <Comments {comments} />
+  <Specification context={data.context}/>
+  <Assigments startTime={[1,2]} items={data.script}/>
+  <Comments comments={data.notes} />
 </div>
 
 <!-- description={'4. El guión de una entrevista para la gerente general, según el esquema visto en teoría'} -->

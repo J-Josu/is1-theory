@@ -1,6 +1,6 @@
 <script lang="ts">
-  export let index: string;
-  export let question: string;
+  export let index: number=0;
+  export let question: string= '';
   export let tracing: string = '';
 </script>
 

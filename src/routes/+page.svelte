@@ -4,7 +4,7 @@
   import Questionary from '$cmps/questionary/Questionary.svelte';
   import Script from '$cmps/script/Script.svelte';
   import Section from '$cmps/Section.svelte';
-  import TeamData from '$cmps/teamData/TeamData.svelte';
+  import TeamData from '$cmps/teamdata/TeamData.svelte';
 </script>
 
 <svelte:head>

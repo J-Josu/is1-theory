@@ -10,7 +10,7 @@
 </main>
 
 <footer>
-  <a href="https://github.com/J-Josu/is1-theory">Build for fun</a>
+  <a href="https://github.com/J-Josu/is1-theory">Codigo fuente</a>
 </footer>
 
 <style>
@@ -37,6 +37,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: 5rem;
+    margin-bottom: 1rem;
     width: 100%;
   }
   a {
@@ -44,5 +46,10 @@
     font-size: 0.75rem;
     margin: 0.25rem;
     font-style: italic;
+    transition: all 0.5s ease-out;
+  }
+  a:hover {
+    font-size: 0.9rem;
+    color: var(--dark-green-2);
   }
 </style>

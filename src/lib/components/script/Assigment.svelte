@@ -1,10 +1,11 @@
 <script lang="ts">
-  export let time: string;
+  export let time: number[];
   export let answer: string = '';
+  
 </script>
 
 <div class="grid">
-  <p>{time} min.</p>
+  <p>{time?.map(n => n.toString()).join(' a ')} min.</p>
   <slot />
   <p>{answer}</p>
 </div>

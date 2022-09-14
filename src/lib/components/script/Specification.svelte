@@ -1,28 +1,35 @@
 <script lang="ts">
   import SpecificationField from './SpecificationField.svelte';
+  export let context: {
+    name: string;
+    date: string;
+    hour: string;
+    place: string;
+    subject: string;
+  };
 </script>
 
 <div>
   <ul>
     <li>
-      <SpecificationField name="Entrevistado" content="Jeff Bentley" />
+      <SpecificationField name="Entrevistado" content={context.name}/>
     </li>
     <li>
-      <SpecificationField name="Fecha" content="19 de enero de 2003" />
+      <SpecificationField name="Fecha" content={context.date} />
     </li>
     <li>
-      <SpecificationField name="Hora" content="1:30 p. m." />
+      <SpecificationField name="Hora" content={context.hour} />
     </li>
     <li>
       <SpecificationField
         name="Lugar"
-        content="Sala 223, Edificio de administracion"
+        content={context.place}
       />
     </li>
     <li>
       <SpecificationField
         name="Tema"
-        content="Politica actual de investigacion de credito"
+        content={context.subject}
       />
     </li>
   </ul>
