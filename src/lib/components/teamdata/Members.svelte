@@ -7,7 +7,7 @@
   <ul>
     <Member name="Lucas Andres" surname="Gallardo Florido" legajo="19630/4" />
     <Member name="Franco Giovanni" surname="Cirrieli" legajo="19632/6" />
-    <Member name="Nicolas" surname="Bonoris" legajo="18378/3" />
+    <Member name="Nicolas" surname="Bonoris" legajo="19413/6" />
     <Member name="Juan Josue" surname="Suarez Arrebola" legajo="20474/6" />
   </ul>
 </div>
@@ -31,16 +31,6 @@
   @media screen and (min-width: 688px) {
     ul {
       grid-template-columns: repeat(2, 1fr);
-    }
-  }
-  @media screen and (min-width: 992px) {
-    nav {
-      max-width: 80vw;
-    }
-  }
-  @media screen and (min-width: 1312px) {
-    nav {
-      max-width: 70vw;
     }
   }
 </style>

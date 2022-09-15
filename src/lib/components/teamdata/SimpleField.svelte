@@ -5,10 +5,11 @@
 
 <div class="container">
   <div class="inner">
-    <h3>{name}:</h3><span>{content}</span>
+    <h3>{name}:</h3>
+    <span>{content}</span>
   </div>
   {#if $$slots.default}
-    <div class='slot'>
+    <div class="slot">
       <slot />
     </div>
   {/if}

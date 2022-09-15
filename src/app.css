@@ -25,7 +25,7 @@ li {
 :root {
   --soft-beige-0: hsl(24, 47%, 93%);
   --soft-beige-1: hsl(24, 47%, 89%);
-  --soft-beige-2: hsl(24, 47%, 85%);
+  --soft-beige-2: hsl(24, 87%, 89%);
   --beige-0: hsl(29, 77%, 44%);
   --beige-1: hsl(29, 77%, 36%);
   --beige-1: hsl(29, 77%, 26%);
@@ -53,12 +53,15 @@ body {
 ::-webkit-scrollbar-corner {
   background: transparent;
 }
+
 ::-webkit-scrollbar-track {
   background: transparent;
 }
+
 ::-webkit-scrollbar-thumb:vertical {
   background: hsl(200, 100%, 75%);
 }
+
 ::-webkit-scrollbar-thumb:vertical:hover {
   background: hsl(200, 100%, 60%);
 }

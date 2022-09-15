@@ -1,4 +1,5 @@
 <script lang="ts">
+  import Cover from '$cmps/Cover.svelte';
   import Definitions from '$cmps/definition/Definitions.svelte';
   import Explanation from '$cmps/explanation/Explanation.svelte';
   import Questionary from '$cmps/questionary/Questionary.svelte';
@@ -12,10 +13,8 @@
   <link rel="icon" href="/argentinian_flag_sun.svg" />
 </svelte:head>
 
-<div>
-  <h1>Trabajo práctico de teoría: 1</h1>
-
-  <h2>Elicitacion de datos para "Cuerpo Fit"</h2>
+<article>
+  <Cover />
 
   <Section
     title={'Datos'}
@@ -51,17 +50,4 @@
   >
     <Definitions />
   </Section>
-</div>
-
-<style>
-  h1 {
-    margin-top: 2rem;
-    font-size: 3rem;
-    text-align: center;
-  }
-  h2 {
-    margin-top: 1rem;
-    font-size: 2.25rem;
-    text-align: center;
-  }
-</style>
+</article>

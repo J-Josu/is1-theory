@@ -2,30 +2,56 @@
   import Assigment from './Assigment.svelte';
   import Objective from './Objective.svelte';
   import Question from './Question.svelte';
-  export let startTime: number[];
-  type Item = {
-    type: string;
+
+  type ObjectiveItem = {
+    type: 'objetive';
     time: number[];
-    title?: string;
-    items?: string[];
-    index?: number;
-    question?: string;
-    tracing?: string;
+    title: string;
+    items: string[];
   };
+  type AssigmentItem = {
+    type: 'question';
+    time: number[];
+    index: number;
+    question: string;
+    tracing: {
+      then?: string[];
+      otherwise?: string[];
+    };
+  };
+  type Item = ObjectiveItem | AssigmentItem;
+
   export let items: Item[];
-  let summary: {
-    questiosnObjetivesTime: number[];
-    questionsTracingTime: number[];
-    totalTime: number[];
-  };
-  let endTime: string;
+
+  const questionsObjetivesTime = items
+    .filter(
+      (item) =>
+        item.type === 'objetive' ||
+        (item.type === 'question' && Object.keys(item.tracing).length == 0)
+    )
+    .map((item) => Math.max(...item.time))
+    .reduce((prev, curr) => prev + curr);
+
+  const questionsTracingTime = items
+    .filter(
+      (item) => item.type === 'question' && Object.keys(item.tracing).length > 0
+    )
+    .map((item) => Math.max(...item.time))
+    .reduce((prev, curr) => prev + curr);
+
+  const totalTime = items
+    .map((item) => Math.max(...item.time))
+    .reduce((prev, curr) => prev + curr);
+
+  let startTime: string = '(a definir comienzo)';
+  let endTime: string = `(comienzo + ${totalTime})`;
 </script>
 
 <div class="container">
   <div class="grid">
-    <p>Tiempo asignado (minutos)</p>
-    <p>Pregunta u objetivo del administrador</p>
-    <p>Respuesta del entrevistado</p>
+    <p>Tiempo asignado</p>
+    <p>Pregunta u objetivo</p>
+    <p>Respuesta</p>
   </div>
   {#each items as item}
     <Assigment time={item.time}>
@@ -40,17 +66,15 @@
       {/if}
     </Assigment>
   {/each}
-  {#if summary}
-    <Assigment time={summary.questiosnObjetivesTime}>
-      <p>Tiempo asignado para preguntas y objetivos</p>
-    </Assigment>
-    <Assigment time={summary.questionsTracingTime}>
-      <p>Tiempo asignado para preguntas de seguimiento y redireccion</p>
-    </Assigment>
-    <Assigment time={summary.totalTime}>
-      <p>Tiempo asignado para la entrevista ({startTime} a {endTime})</p>
-    </Assigment>
-  {/if}
+  <Assigment time={[questionsObjetivesTime]}>
+    <p>Tiempo asignado para preguntas y objetivos</p>
+  </Assigment>
+  <Assigment time={[questionsTracingTime]}>
+    <p>Tiempo asignado para preguntas de seguimiento y redireccion</p>
+  </Assigment>
+  <Assigment time={[questionsObjetivesTime + questionsTracingTime]}>
+    <p>Tiempo asignado para la entrevista {startTime} a {endTime}</p>
+  </Assigment>
 </div>
 
 <style>
@@ -59,7 +83,7 @@
   }
   :global(.grid) {
     display: grid;
-    grid-template-columns: 80px 1fr 1fr;
+    grid-template-columns: 80px 2fr 1fr;
   }
   :global(.grid > *) {
     border: 1px solid lightgrey;

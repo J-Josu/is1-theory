@@ -8,7 +8,7 @@
 
 <div>
   <Specification context={data.context} />
-  <Assigments startTime={[1, 2]} items={data.script} />
+  <Assigments items={data.script} />
   <Comments comments={data.notes} />
 </div>
 

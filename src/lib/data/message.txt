@@ -1,0 +1,70 @@
+Precondiciones
+	Horario y lugar a acordar con la entrevistada
+	Estado e información general de Cuerpo Fit
+	33 minutos + 12 de seguimiento tiempo asignado máximo 45 minutos
+
+Presentación
+	Agradecemos mucho el tiempo que se está tomando
+	Vamos a intentar ir al grano y a resolver las preguntas de mayor relevancia
+	Siéntase libre de a explayarse cuando lo crea necesario, nosotros le haremos saber si se está alejando del tiempo estipulado
+
+Cierre
+	Le haremos llegar los daos de la entrevista ...
+	Si acordó en enviarnos datos de los clientes, acordar el mail de envío y el formato
+	Agradecer  nuevamente y concluír
+	
+Comentarios y notas
+	La entrevistada tiene una disponibilidad de tiempo muy baja, buscamos principalmente respuestas a las preguntas m[as relevantes, yendo más al grano a la hora de planificar las preguntas
+	El objetivo principal en torno al tiempo será hacerlo conciso y rápido, pero buscando resolver todo en esta entrevista, ya que otro acuerdo puede llegar a ser una gran molestia
+	Se tratan las preguntas en orden de relevancia, son en su mayoría cerradas y en las pocas abiertas nos interesa mucho que la entrevistada se explaye
+
+-------------------------------PREGUNTAS------------------------------------------------------------------------------------------------
+
+- ¿Podrían brindarnos el código (Implementación) del software actual, para así poder adaptar las nuevas características a este? (2min)
+
+- ¿Poseen estadísticas básicas sobre los clientes?
+
+    (Sí es así)
+
+    - ¿Podrían brindarnos las mismas?
+
+        Importancia 
+
+        - Números específicos
+
+            Ejemplos
+
+            - Edad promedio → para técnicas de integración del cliente.
+            - Cantidad de clientes actual  → para cálculos de flujo.
+        - Estimados
+
+            Ejemplos
+
+            - Expectativas de crecimiento.
+
+- ¿Poseen opciónes de accesibilidad? (2 a 3min)
+	- ¿Desean agregar alguna en especial?
+
+
+- Que expectativas tienen en torno a las mejoras que va a producir esta implementacion en su forma de trabajo? (5 a 7 min)
+
+
+- Asumen algún efecto secundario negativo en la derivación de esta función a un producto de software?(5min)
+
+
+- Tienen algún plan en torno al método de integración de los clientes a esta nueva función?(3 a 5min)
+
+
+- Planean generar alguna estadística con la información obtenida? (1 a 3min)
+	si 
+	  (Tiene pensado alguna en especifico?)
+
+
+- Se archivan los datos obtenidos de los reclamos y solicitudes atendidos? (3 a 5min)
+	Si 
+	  (se almacenan bajo algun orden especifico?)
+	  (Cuanto tiempo se mantienen almacenados esos datos?)
+	sino 
+	  (Desean almacenar estos datos de alguna manera especifica?)
+		si 
+		  (De que manera?)
