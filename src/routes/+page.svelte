@@ -1,11 +1,11 @@
 <script lang="ts">
   import Cover from '$cmps/Cover.svelte';
   import Definitions from '$cmps/definition/Definitions.svelte';
-  import Explanation from '$cmps/explanation/Explanation.svelte';
-  import Questionary from '$cmps/questionary/Questionary.svelte';
+  import Explanation from '$cmps/Explanation.svelte';
+  import Questionary from '$cmps/Questionary.svelte';
   import Script from '$cmps/script/Script.svelte';
   import Section from '$cmps/Section.svelte';
-  import TeamData from '$cmps/teamdata/TeamData.svelte';
+  import TeamDescription from '$cmps/teamdescription/TeamDescription.svelte';
 </script>
 
 <svelte:head>
@@ -20,7 +20,7 @@
     title={'Datos'}
     subTitle={'Informacion sobre el equipo de desarrollo'}
   >
-    <TeamData />
+    <TeamDescription />
   </Section>
 
   <Section

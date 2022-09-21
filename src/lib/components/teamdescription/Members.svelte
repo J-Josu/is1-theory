@@ -1,14 +1,21 @@
 <script lang="ts">
-  import Member from './Member.svelte';
+  export let members: {
+    name: string;
+    surname: string;
+    legajo: string;
+  }[];
 </script>
 
 <div>
   <h3>Integrantes</h3>
   <ul>
-    <Member name="Lucas Andres" surname="Gallardo Florido" legajo="19630/4" />
-    <Member name="Fanco Giovanni" surname="Cirielli" legajo="19632/6" />
-    <Member name="Nicolas" surname="Bonoris" legajo="19413/6" />
-    <Member name="Juan Josue" surname="Suarez Arrebola" legajo="20474/6" />
+    {#each members as { name, surname, legajo }}
+      <li>
+        <p><b>Nombre:</b> {name}</p>
+        <p><b>Apellido:</b> {surname}</p>
+        <p><b>Legajo:</b> {legajo}</p>
+      </li>
+    {/each}
   </ul>
 </div>
 
@@ -39,5 +46,16 @@
     ul {
       grid-template-columns: repeat(2, 1fr);
     }
+  }
+  li {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    border: 1px solid gray;
+    border-radius: 1rem;
+    padding: 2rem;
+  }
+  p {
+    font-size: 1rem;
   }
 </style>
