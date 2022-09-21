@@ -1,35 +1,39 @@
 <script lang="ts">
-  export let index: number = 0;
-  export let question: string = '';
+  export let index: number;
+  export let question: string;
   export let tracing: {
-    then?: string[];
-    otherwise?: string[];
-  };
+    title: string;
+    items: string[];
+  }[];
+  export let objective: string;
 </script>
 
 <div>
   <h5>Pregunta {index + 1}</h5>
   <p>{question}</p>
-  <h5>{tracing.then || tracing.otherwise ? 'Seguimiento' : ''}</h5>
-  {#if tracing.then}
-    <p>Si es asi:</p>
+  <h5>{tracing.length > 0 ? 'Seguimiento' : ''}</h5>
+  {#each tracing as { title, items }}
+    <p>{title}</p>
     <ul>
-      {#each tracing.then as otherQuestion}
-        <li>{otherQuestion}</li>
+      {#each items as sentence}
+        <li>{sentence}</li>
       {/each}
     </ul>
-  {/if}
-  {#if tracing.otherwise}
-    <p>Sino es asi:</p>
-    <ul>
-      {#each tracing.otherwise as otherQuestion}
-        <li>{otherQuestion}</li>
-      {/each}
-    </ul>
+  {/each}
+  {#if objective}
+    <h5>Objetivo</h5>
+    <p>{objective}</p>
   {/if}
 </div>
 
 <style>
+  h5 {
+    font-size: 1rem;
+    font-weight: 500;
+  }
+  div > h5:not(:first-child) {
+    margin-top: 0.125rem;
+  }
   p {
     margin-left: 0.25rem;
     padding-block: 0.25rem;

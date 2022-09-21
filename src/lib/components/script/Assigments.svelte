@@ -1,10 +1,10 @@
 <script lang="ts">
   import Assigment from './Assigment.svelte';
-  import Objective from './Objective.svelte';
+  import Context from './Context.svelte';
   import Question from './Question.svelte';
 
-  type ObjectiveItem = {
-    type: 'objetive';
+  type ContextItem = {
+    type: 'context';
     time: number[];
     title: string;
     items: string[];
@@ -14,34 +14,33 @@
     time: number[];
     index: number;
     question: string;
+    objective: string;
     tracing: {
-      then?: string[];
-      otherwise?: string[];
-    };
+      title: string;
+      items: string[];
+    }[];
   };
-  type Item = ObjectiveItem | AssigmentItem;
+  type Item = ContextItem | AssigmentItem;
 
   export let items: Item[];
 
   const questionsObjetivesTime = items
     .filter(
       (item) =>
-        item.type === 'objetive' ||
-        (item.type === 'question' && Object.keys(item.tracing).length == 0)
+        item.type === 'context' ||
+        (item.type === 'question' && item.tracing.length == 0)
     )
     .map((item) => Math.max(...item.time))
-    .reduce((prev, curr) => prev + curr);
+    .reduce((acc, curr) => acc + curr);
 
   const questionsTracingTime = items
-    .filter(
-      (item) => item.type === 'question' && Object.keys(item.tracing).length > 0
-    )
+    .filter((item) => item.type === 'question' && item.tracing.length > 0)
     .map((item) => Math.max(...item.time))
-    .reduce((prev, curr) => prev + curr);
+    .reduce((acc, curr) => acc + curr);
 
   const totalTime = items
     .map((item) => Math.max(...item.time))
-    .reduce((prev, curr) => prev + curr);
+    .reduce((acc, curr) => acc + curr);
 
   let startTime: string = '(a definir comienzo)';
   let endTime: string = `(comienzo + ${totalTime})`;
@@ -55,13 +54,14 @@
   </div>
   {#each items as item}
     <Assigment time={item.time}>
-      {#if item.type === 'objetive'}
-        <Objective category={item.title} objectives={item.items} />
+      {#if item.type === 'context'}
+        <Context title={item.title} objectives={item.items} />
       {:else}
         <Question
           index={item.index}
           question={item.question}
           tracing={item.tracing}
+          objective={item.objective}
         />
       {/if}
     </Assigment>

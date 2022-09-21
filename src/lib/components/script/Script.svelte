@@ -3,7 +3,7 @@
   import Comments from './Comments.svelte';
   import Specification from './Specification.svelte';
 
-  import data from './data.json';
+  import data from '$lib/data/script.json';
 </script>
 
 <div>
