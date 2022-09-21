@@ -16,16 +16,16 @@
 <style>
   main {
     margin-inline: auto;
-    max-width: 95vw;
+    max-width: 99%;
   }
   @media screen and (min-width: 688px) {
     main {
-      max-width: 90vw;
+      max-width: 95vw;
     }
   }
   @media screen and (min-width: 992px) {
     main {
-      max-width: 80vw;
+      max-width: 85vw;
     }
   }
   @media screen and (min-width: 1312px) {
