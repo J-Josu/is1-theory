@@ -93,7 +93,7 @@
     width: 0%;
     bottom: 0;
     left: 50%;
-    border-bottom: 2px solid var(--dark-green-1);;
+    border-bottom: 2px solid var(--dark-green-1);
     opacity: 1;
     transition: width 0.5s ease, left 0.5s ease;
   }

@@ -6,7 +6,7 @@
   <h3>Integrantes</h3>
   <ul>
     <Member name="Lucas Andres" surname="Gallardo Florido" legajo="19630/4" />
-    <Member name="Franco Giovanni" surname="Cirrieli" legajo="19632/6" />
+    <Member name="Fanco Giovanni" surname="Cirielli" legajo="19632/6" />
     <Member name="Nicolas" surname="Bonoris" legajo="19413/6" />
     <Member name="Juan Josue" surname="Suarez Arrebola" legajo="20474/6" />
   </ul>
@@ -15,6 +15,13 @@
 <style>
   div {
     padding-block: 1rem;
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+  @media screen and (min-width: 688px) {
+    div {
+      margin: 0;
+    }
   }
   h3 {
     margin-top: 1rem;

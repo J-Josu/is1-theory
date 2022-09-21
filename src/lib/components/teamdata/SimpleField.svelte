@@ -17,8 +17,15 @@
 
 <style>
   .container {
+    margin-left: 5%;
     padding-block: 1rem;
   }
+  @media screen and (min-width: 688px) {
+    .container {
+      margin-left: 0;
+    }
+  }
+
   .inner {
     display: flex;
     margin-top: 1rem;
@@ -32,6 +39,7 @@
   h3::first-letter {
     text-transform: uppercase;
   }
+
   .slot {
     margin: 1rem 1rem 0 1rem;
   }

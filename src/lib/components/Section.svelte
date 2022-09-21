@@ -33,10 +33,22 @@
   header > p {
     margin-top: 0.25rem;
     font-size: 1.25rem;
+    text-align: center;
+    max-width: 80%;
   }
   main {
     align-self: center;
-    width: 92.5%;
+    width: 100%;
     padding-top: 2rem;
+  }
+  @media screen and (min-width: 688px) {
+    main {
+      width: 95%;
+    }
+  }
+  @media screen and (min-width: 992px) {
+    main {
+      width: 90%;
+    }
   }
 </style>

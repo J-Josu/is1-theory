@@ -12,7 +12,7 @@
 <div>
   <ul>
     <li>
-      <SpecificationField name="Entrevistado" content={context.name}/>
+      <SpecificationField name="Entrevistado" content={context.name} />
     </li>
     <li>
       <SpecificationField name="Fecha" content={context.date} />
@@ -21,16 +21,10 @@
       <SpecificationField name="Hora" content={context.hour} />
     </li>
     <li>
-      <SpecificationField
-        name="Lugar"
-        content={context.place}
-      />
+      <SpecificationField name="Lugar" content={context.place} />
     </li>
     <li>
-      <SpecificationField
-        name="Tema"
-        content={context.subject}
-      />
+      <SpecificationField name="Tema" content={context.subject} />
     </li>
   </ul>
 </div>
