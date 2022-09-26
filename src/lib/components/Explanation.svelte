@@ -3,9 +3,9 @@
 
 <div class="container">
   <div>
-    <h3>Obtencion:</h3>
+    <h3>Obtencion</h3>
     <p>
-      Los cuestionarios como se mostraron anteriormente son mediante <a
+      Los cuestionarios como se mostro anteriormente se realizan mediante <a
         href="https://www.google.com/forms/about/"
         target="_blank"
         rel="noopener noreferrer">Google Forms</a
@@ -19,24 +19,59 @@
         rel="noopener noreferrer">Google Sheets</a
       > con toda la informacion generada para un procesado posterior
     </p>
+    <p>
+      Estos seran enviados (link de acceso cuestionario web) via mail personal
+      de trabajo de cada gerente para que sean respondidos en un plazo de una
+      semana
+    </p>
+    <p>
+      Una vez que cada gerente responda su cuestionario automaticamente la
+      informacion se sincroniza y esta disponible para su procesado por los
+      medios anteriormente descriptos esto nos brinda agilidad a la hora de
+      recopilar la informacion y logra que el gerente solo tenga que responderlo
+      y no preocuparse por cuestiones aledañas
+    </p>
   </div>
   <div>
-    <h3>Administracion:</h3>
+    <h3>Administracion</h3>
     <p>
-      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis dolore
-      perferendis quisquam dolorum facere labore, quos repellat, aperiam amet
-      cupiditate voluptatum explicabo. Asperiores, sint similique! Animi qui
-      praesentium dolorem similique!
+      El procesamiento de la informacion generada sera de manera manual. Esta
+      informacion la podemos clasificar en dos secciones:
     </p>
+    <div class="data-type">
+      <h4>Datos exactos</h4>
+      <p>
+        Estos son los valores numericos como el numero de la sucursal, rangos de
+        edades entre otros. Con estos podemos generar estadisticas de la cadena
+        deportiva en general y de las sucursales puntuales
+      </p>
+      <p>
+        Como la parte que representa este tipo no es mayoritaria dentro de la
+        informacion recaudada no es necesaria la automatizacion de esta tarea
+      </p>
+    </div>
+    <div class="data-type">
+      <h4>Datos no exactos</h4>
+      <p>
+        Estos son las respuestas abiertas y/o con desarrollo que se realizaron
+      </p>
+      <p>
+        Dado que hay un factor humano/opinion en este tipo es necesario que el
+        procesamiento sea manual dado que un humano podra interpretar en el caso
+        que la respuesta no sea clara lo que los gerentes que respondieron los
+        cuestionarios quisieron transmitir. Ademas que la cantidad de
+        cuestionarios a procesar es manejable
+      </p>
+    </div>
   </div>
 </div>
 
 <!-- description={'6. La explicación de cómo se realizará la administración y obtención de resultados de los cuestionarios.'} -->
 <style>
   .container {
-    padding: 0.5rem;
     display: grid;
     gap: 2rem;
+    padding: 0.5rem;
   }
   @media screen and (min-width: 688px) {
     .container {
@@ -51,14 +86,17 @@
     }
   }
   .container > div {
+    padding-bottom: 0.5rem;
     border-bottom: 2px solid lightgray;
   }
   p {
-    position: relative;
-    margin-top: 0.5rem;
-    padding: 0 1rem 1rem 1rem;
+    padding-block: 0.5rem;
+    padding-inline: 1rem;
   }
   a {
     font-style: italic;
+  }
+  .data-type {
+    margin-left: 1rem;
   }
 </style>

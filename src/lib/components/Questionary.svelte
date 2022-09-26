@@ -1,10 +1,27 @@
 <script lang="ts">
-  let link: string = 'https://support.google.com/a/users/answer/9303071?hl=en';
+  export let link: string;
+
+  let displayAll = false;
+
+  const formSections = new Array(7).fill({}).map((_, i) => {
+    return {
+      src: `googleform/page-${i + 1}.png`,
+      alt: `Pagina ${i + 1} del cuestionario`,
+    };
+  });
 </script>
 
 <div>
   <a href={link} target="_blank" rel="noopener noreferrer">
-    <img src="/google-form.png" alt="Preview del cuestionario online" /></a
+    <img src={formSections[0].src} alt={formSections[0].alt} />
+  </a>
+  {#if displayAll}
+    {#each formSections.slice(1) as { src, alt }}
+      <img {src} {alt} />
+    {/each}
+  {/if}
+  <button on:click={() => (displayAll = !displayAll)}
+    ><span>{displayAll ? '-' : '+'}</span></button
   >
 </div>
 
@@ -12,16 +29,27 @@
 <style>
   div {
     display: flex;
-    justify-content: center;
-  }
-  a {
-    /* display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: space-around;
-    justify-items: space-around; */
-    width: 90%;
+    gap: 2rem;
   }
   img {
     width: 100%;
+    max-width: 976px;
+  }
+  button {
+    align-self: flex-end;
+    padding-block: 0.5rem;
+    padding-inline: 1rem;
+    background: none;
+    opacity: 0.8;
+    border: 1px solid lightgray;
+    border-radius: 4px;
+    text-align: center;
+    font-family: inherit;
+  }
+  span {
+    font-size: 2rem;
+    line-height: 1.25rem;
   }
 </style>

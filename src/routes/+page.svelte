@@ -1,6 +1,6 @@
 <script lang="ts">
   import Cover from '$cmps/Cover.svelte';
-  import Definitions from '$cmps/definition/Definitions.svelte';
+  import Definitions from '$cmps/technique/Techniques.svelte';
   import Explanation from '$cmps/Explanation.svelte';
   import Questionary from '$cmps/Questionary.svelte';
   import Script from '$cmps/script/Script.svelte';
@@ -34,7 +34,9 @@
     title={'Cuestionario'}
     subTitle={'Conformacion de los cuestionarios a realizar'}
   >
-    <Questionary />
+    <Questionary
+      link="https://docs.google.com/forms/d/e/1FAIpQLScKUodXeSGOb1lZDgZqP4QQrLqoAQsR5aKSPtZtpNPj5l-CZA/formResponse"
+    />
   </Section>
 
   <Section
@@ -45,8 +47,8 @@
   </Section>
 
   <Section
-    title={'Definiciones'}
-    subTitle={'Desarrollo de terminologia y referencias'}
+    title={'Otras tecnicas'}
+    subTitle={'Formas para obtener mas información, terminologias y referencias'}
   >
     <Definitions />
   </Section>
