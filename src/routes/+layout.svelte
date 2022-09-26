@@ -50,7 +50,7 @@
     opacity: 0.7;
   }
   a:hover {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     color: var(--dark-green-2);
     opacity: 0.9;
   }

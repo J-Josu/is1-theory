@@ -14,7 +14,7 @@
       </li>
       <li>
         <a
-          href="https://github.com/J-Josu/is1-theory/"
+          href="https://is1-teoria.vercel.app/"
           target="_blank"
           rel="noopener noreferrer"
           class="logo"><SolvedLogo height="1.5rem" /></a

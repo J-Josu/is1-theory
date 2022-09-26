@@ -12,13 +12,20 @@
 </script>
 
 <div>
-  <a href={link} target="_blank" rel="noopener noreferrer">
-    <img src={formSections[0].src} alt={formSections[0].alt} />
-  </a>
   {#if displayAll}
-    {#each formSections.slice(1) as { src, alt }}
+    <p>
+      Enlace al cuestionario:
+      <a href={link} target="_blank" rel="noopener noreferrer">
+        <i>{link}</i>
+      </a>
+    </p>
+    {#each formSections as { src, alt }}
       <img {src} {alt} />
     {/each}
+  {:else}
+    <a href={link} target="_blank" rel="noopener noreferrer">
+      <img src={formSections[0].src} alt={formSections[0].alt} />
+    </a>
   {/if}
   <button on:click={() => (displayAll = !displayAll)}
     ><span>{displayAll ? '-' : '+'}</span></button
@@ -33,6 +40,12 @@
     align-items: center;
     gap: 2rem;
   }
+  p {
+    max-width: 90%;
+  }
+  a {
+    word-break: break-all;
+  }
   img {
     width: 100%;
     max-width: 976px;
@@ -42,11 +55,11 @@
     padding-block: 0.5rem;
     padding-inline: 1rem;
     background: none;
-    opacity: 0.8;
     border: 1px solid lightgray;
     border-radius: 4px;
     text-align: center;
     font-family: inherit;
+    opacity: 0.8;
   }
   span {
     font-size: 2rem;

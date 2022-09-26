@@ -1,9 +1,9 @@
 <script lang="ts">
   import BookQuote from '../references/BookQuote.svelte';
-  import Definition from './Definition.svelte';
+  import Base from './Base.svelte';
 </script>
 
-<Definition title="Caso de uso">
+<Base title="Caso de uso">
   <p>
     En nuestro caso, buscar información y requerimientos por medio del análisis
     de casos de uso será más que importante, ya que planeamos refinar los datos
@@ -25,9 +25,8 @@
   </p>
   <BookQuote
     author="Ian Sommerville"
-    publishDate="undefined"
+    publishDate="2011"
     title="Ingeniería de Software, 9° Edición"
     editorialName="Pearson"
-  />
-  . . . USANDO: “” Pearson, - (Páginas 106 - 108)
-</Definition>
+  />(Páginas 106 - 108)
+</Base>

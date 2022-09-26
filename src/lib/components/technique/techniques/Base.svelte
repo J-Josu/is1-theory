@@ -1,5 +1,5 @@
 <script lang="ts">
-  export let title : string;
+  export let title: string;
 </script>
 
 <li>
@@ -10,8 +10,9 @@
 <style>
   li {
     margin-top: 1rem;
+    padding-block: 0.5rem;
   }
-  li > :global(p) {
+  li > :global(*:not(h4)) {
     padding-block: 0.5rem;
     padding-inline: 1rem;
   }
