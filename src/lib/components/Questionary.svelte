@@ -1,7 +1,7 @@
 <script lang="ts">
   export let link: string;
 
-  let displayAll = true;
+  let displayAll = false;
 
   const formSections = new Array(7).fill({}).map((_, i) => {
     return {
