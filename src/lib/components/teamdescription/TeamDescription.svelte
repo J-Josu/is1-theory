@@ -3,11 +3,13 @@
   import SimpleField from './SimpleField.svelte';
 
   import data from '$lib/data/team.json';
+  import SpacerPDFReady from '$cmps/pdfready/SpacerPDFReady.svelte';
 </script>
 
 <div>
   <SimpleField name="numero de grupo" content={data.group_number.toString()} />
   <Members members={data.members} />
+  <SpacerPDFReady height="6rem" />
   <SimpleField name="nombre de grupo" content={data.name}>
     <p>
       Nosotros queriamos encontrar un sentido que describa nuestro proposito

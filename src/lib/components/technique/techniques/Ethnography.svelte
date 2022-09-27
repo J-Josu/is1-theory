@@ -1,4 +1,5 @@
 <script lang="ts">
+  import SpacerPdfReady from '$cmps/pdfready/SpacerPDFReady.svelte';
   import BookQuote from '../references/BookQuote.svelte';
   import Base from './Base.svelte';
 </script>
@@ -57,6 +58,7 @@
       como el análisis de casos de uso
     </p>
   </div>
+  <SpacerPdfReady height="5vh" />
   <div class="subsection">
     <h4>Conclusión</h4>
     <p>
@@ -71,12 +73,13 @@
     </p>
   </div>
 
-  <BookQuote
+  <SpacerPdfReady height="5vh" />
+  <!-- <BookQuote
     author="Ian Sommerville"
     publishDate="2011"
     title="Ingeniería de Software, 9° Edición"
     editorialName="Pearson"
-  />
+  /> -->
 </Base>
 
 <style>

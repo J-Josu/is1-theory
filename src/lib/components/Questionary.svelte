@@ -1,7 +1,7 @@
 <script lang="ts">
   export let link: string;
 
-  let displayAll = false;
+  let displayAll = true;
 
   const formSections = new Array(7).fill({}).map((_, i) => {
     return {
@@ -20,16 +20,20 @@
       </a>
     </p>
     {#each formSections as { src, alt }}
-      <img {src} {alt} />
+      <div class="window"><img {src} {alt} /></div>
     {/each}
   {:else}
     <a href={link} target="_blank" rel="noopener noreferrer">
-      <img src={formSections[0].src} alt={formSections[0].alt} />
+      <div class="window">
+        <img src={formSections[0].src} alt={formSections[0].alt} />
+      </div>
     </a>
   {/if}
-  <button on:click={() => (displayAll = !displayAll)}
-    ><span>{displayAll ? '-' : '+'}</span></button
-  >
+  <button
+    class:printing={displayAll}
+    on:click={() => (displayAll = !displayAll)}
+    ><span>{displayAll ? '-' : '+'}</span>
+  </button>
 </div>
 
 <!-- description={'5. Un cuestionario para los/las gerentes de cada local. Definirlo adecuadamente según lo visto en teoría con, a lo sumo 20 preguntas'} -->
@@ -46,9 +50,13 @@
   a {
     word-break: break-all;
   }
-  img {
-    width: 100%;
+  .window {
+    justify-items: center;
+    overflow: hidden;
     max-width: 976px;
+  }
+  img {
+    width: 175%;
   }
   button {
     align-self: flex-end;
@@ -59,7 +67,13 @@
     border-radius: 4px;
     text-align: center;
     font-family: inherit;
-    opacity: 0.8;
+    opacity: 0.5;
+  }
+  button.printing {
+    opacity: 0;
+  }
+  button:hover {
+    opacity: 1;
   }
   span {
     font-size: 2rem;

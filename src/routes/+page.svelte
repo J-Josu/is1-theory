@@ -3,9 +3,12 @@
   import Definitions from '$cmps/technique/Techniques.svelte';
   import Explanation from '$cmps/Explanation.svelte';
   import Questionary from '$cmps/Questionary.svelte';
-  import Script from '$cmps/script/Script.svelte';
   import Section from '$cmps/Section.svelte';
+  import Script from '$cmps/script/Script.svelte';
   import TeamDescription from '$cmps/teamdescription/TeamDescription.svelte';
+
+  import SpacerPdfReady from '$cmps/pdfready/SpacerPDFReady.svelte';
+  import TogglePdfReady from '$cmps/pdfready/TogglePDFReady.svelte';
 </script>
 
 <svelte:head>
@@ -30,6 +33,7 @@
     <Script />
   </Section>
 
+  <SpacerPdfReady height="45vh" />
   <Section
     title={'Cuestionario'}
     subTitle={'Conformacion de los cuestionarios a realizar'}
@@ -39,6 +43,7 @@
     />
   </Section>
 
+  <SpacerPdfReady height="25vh" />
   <Section
     title={'Explicacion'}
     subTitle={'Como se realizara el manejo de la informacion a elicitar'}
@@ -46,10 +51,14 @@
     <Explanation />
   </Section>
 
+  <SpacerPdfReady height="15vh" />
   <Section
     title={'Otras tecnicas'}
     subTitle={'Formas para obtener mas información, terminologias y referencias'}
   >
     <Definitions />
   </Section>
+
+  <SpacerPdfReady height="62.5vh" />
+  <TogglePdfReady />
 </article>

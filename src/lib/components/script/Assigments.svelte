@@ -1,4 +1,5 @@
 <script lang="ts">
+  import SpacerPDFReady from '$cmps/pdfready/SpacerPDFReady.svelte';
   import Assigment from './Assigment.svelte';
   import Context from './Context.svelte';
   import Question from './Question.svelte';
@@ -52,7 +53,10 @@
     <p>Pregunta u objetivo</p>
     <p>Respuesta</p>
   </div>
-  {#each items as item}
+  {#each items as item, i}
+    {#if i === 2 || i === 6 || i === 10}
+      <SpacerPDFReady height="8rem" />
+    {/if}
     <Assigment time={item.time}>
       {#if item.type === 'context'}
         <Context title={item.title} objectives={item.items} />
