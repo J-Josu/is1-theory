@@ -9,7 +9,7 @@
   <div>
     <h3>Tecnicas</h3>
     <p>
-      Para obtener mas informacion y/o requerimientos se pueden seguir una o
+      Para obtener mas información y/o requerimientos se pueden seguir una o
       varias de las siguientes tecnicas:
     </p>
     <ul>
