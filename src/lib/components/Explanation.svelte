@@ -5,29 +5,29 @@
   <div>
     <h3>Obtencion</h3>
     <p>
-      Los cuestionarios como se mostro anteriormente se realizan mediante <a
+      Los cuestionarios como se mostró anteriormente se realizan mediante <a
         href="https://www.google.com/forms/about/"
         target="_blank"
         rel="noopener noreferrer">Google Forms</a
       >
-      esto nos permite gestionar todas las respuestas a travez de las herramientas
-      que ofrece google para ello como lo son la pagina de gestion del formulario
+      esto nos permite gestionar todas las respuestas a través de las herramientas
+      que ofrece google para ello como lo son la página de gestión del formulario
       activo (en tiempo real) o la posibilidad de generar un
       <a
         href="https://www.google.com/sheets/about/"
         target="_blank"
         rel="noopener noreferrer">Google Sheets</a
-      > con toda la informacion generada para un procesado posterior
+      > con toda la información generada para un procesado posterior
     </p>
     <p>
-      Estos seran enviados (link de acceso cuestionario web) via mail personal
-      de trabajo de cada gerente para que sean respondidos en un plazo de una
+      Estos serán enviados (link de acceso cuestionario web) via mail personal
+      de trabajo de cada gerente para que sean respondidos en el plazo de una
       semana
     </p>
     <p>
       Una vez que cada gerente responda su cuestionario automaticamente la
-      informacion se sincroniza y esta disponible para su procesado por los
-      medios anteriormente descriptos esto nos brinda agilidad a la hora de
+      informacion se sincroniza y está disponible para su procesado por los
+      medios anteriormente descriptos, esto nos brinda agilidad a la hora de
       recopilar la informacion y logra que el gerente solo tenga que responderlo
       y no preocuparse por cuestiones aledañas
     </p>
@@ -35,19 +35,19 @@
   <div>
     <h3>Administracion</h3>
     <p>
-      El procesamiento de la informacion generada sera de manera manual. Esta
-      informacion la podemos clasificar en dos secciones:
+      El procesamiento de la información generada sera de manera manual. Esta
+      información la podemos clasificar en dos secciones:
     </p>
     <div class="data-type">
       <h4>Datos exactos</h4>
       <p>
-        Estos son los valores numericos como el numero de la sucursal, rangos de
-        edades entre otros. Con estos podemos generar estadisticas de la cadena
+        Estos son los valores numéricos como el número de la sucursal, rangos de
+        edades entre otros. Con estos podemos generar estadísticas de la cadena
         deportiva en general y de las sucursales puntuales
       </p>
       <p>
         Como la parte que representa este tipo no es mayoritaria dentro de la
-        informacion recaudada no es necesaria la automatizacion de esta tarea
+        información recaudada no es necesaria la automatización de esta tarea
       </p>
     </div>
     <div class="data-type">
